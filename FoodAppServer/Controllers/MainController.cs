@@ -66,5 +66,29 @@ namespace FoodAppServer.Controllers
             var ret = _service.GetIngredientsByFoodId(request);
             return ret;
         }
+
+        [Route("api/Main/GetFoodWithoutIngredient")]
+        [HttpPost]
+        public Response GetFoodWithoutIngredient([FromBody] GetFoodWithoutIngredientRequest request)
+        {
+            var ret = _service.GetFoodWithoutIngredient(request);
+            return ret;
+        }
+
+        [Route("api/Main/GetFoodByMaxIngredient")]
+        [HttpPost]
+        public Response GetFoodByMaxIngredient([FromBody] GetFoodByMaxIngredientRequest request)
+        {
+            var ret = _service.GetFoodByMaxIngredient(request);
+            return ret;
+        }
+
+        [Route("api/Main/GetCuisineByIngredient")]
+        [HttpPost]
+        public Response GetCuisineByIngredient([FromBody] GetCuisineByIngredientRequest request)
+        {
+            var ret = _service.GetCuisineByIngredient(request);
+            return ret;
+        }
     }
 }

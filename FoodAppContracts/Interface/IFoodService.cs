@@ -16,5 +16,11 @@ namespace FoodAppContracts.Interface
         public Response GetIngredient(GetIngredientRequest request);
 
         public Response GetIngredientsByFoodId(GetIngredientsByFoodIdRequest request);
+
+        public Response GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request);
+
+        public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request);
+
+        public Response GetCuisineByIngredient(GetCuisineByIngredientRequest request);
     }
 }

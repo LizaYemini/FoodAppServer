@@ -43,6 +43,33 @@ namespace FoodService
             }
         }
 
+        public Response GetCuisineByIngredient(GetCuisineByIngredientRequest request)
+        {
+            List<string> cuisinesList = new List<string>();
+
+            try
+            {
+                var dataSet = _dal.GetCuisineByIngredient(request);
+                var table = dataSet.Tables[0];
+                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
+                {
+                    string temp = table.Rows[i]["Cuisine"].ToString();
+                    cuisinesList.Add(temp);
+                }
+
+                GetCuisineByIngredientResponse ret = new GetCuisineByIngredientResponseOk
+                {
+                    Cuisines = cuisinesList.ToArray()
+                };
+
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                return new AppResponseError(ex.Message);
+            }
+        }
+
         public Response GetFoodByCuisine(GetFoodByCuisineRequest request)
         {
             List<string> foodList = new List<string>();
@@ -112,6 +139,60 @@ namespace FoodService
                 }
 
                 GetFoodByIngredientResponse ret = new GetFoodByIngredientResponseOk
+                {
+                    Food = foodList.ToArray()
+                };
+
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                return new AppResponseError(ex.Message);
+            }
+        }
+
+        public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request)
+        {
+            List<string> foodList = new List<string>();
+
+            try
+            {
+                var dataSet = _dal.GetFoodByMaxIngredient(request);
+                var table = dataSet.Tables[0];
+                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
+                {
+                    string temp = table.Rows[i]["food_id"].ToString();
+                    foodList.Add(temp);
+                }
+
+                GetFoodByMaxIngredientResponse ret = new GetFoodByMaxIngredientResponseOk
+                {
+                    Food = foodList.ToArray()
+                };
+
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                return new AppResponseError(ex.Message);
+            }
+        }
+
+        public Response GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request)
+        {
+            List<string> foodList = new List<string>();
+
+            try
+            {
+                var dataSet = _dal.GetFoodWithoutIngredient(request);
+                var table = dataSet.Tables[0];
+                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
+                {
+                    string temp = table.Rows[i]["food_id"].ToString();
+                    foodList.Add(temp);
+                }
+
+                GetFoodWithoutIngredientResponse ret = new GetFoodWithoutIngredientResponseOk
                 {
                     Food = foodList.ToArray()
                 };

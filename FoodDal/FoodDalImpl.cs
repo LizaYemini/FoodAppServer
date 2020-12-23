@@ -31,6 +31,18 @@ namespace FoodDal
             return _infraDal.ExecSpQuery(cmd);
         }
 
+        public DataSet GetCuisineByIngredient(GetCuisineByIngredientRequest request)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getCuisineByIngredient"
+            };
+            var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetFoodByCuisine(GetFoodByCuisineRequest request)
         {
             var cmd = new MySqlCommand
@@ -65,6 +77,30 @@ namespace FoodDal
             {
                 Connection = _conn,
                 CommandText = "getFoodByIngredient"
+            };
+            var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
+        public DataSet GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByMaxIngredient"
+            };
+            var param = _infraDal.GetParameter("p_max", MySqlDbType.Int32, request.Max);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
+        public DataSet GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodWithoutIngredient"
             };
             var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
             cmd.Parameters.Add(param);
