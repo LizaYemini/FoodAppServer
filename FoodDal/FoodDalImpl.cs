@@ -4,6 +4,7 @@ using DIContracts;
 using FoodAppContracts.Dto.Request;
 using FoodAppContracts.Interface;
 using InfraContracts.Interfaces;
+using MySql.Data.MySqlClient;
 using Oracle.ManagedDataAccess.Client;
 
 namespace FoodDal
@@ -11,43 +12,87 @@ namespace FoodDal
     [Register(Policy.Transient, typeof(IFoodDal))]
     public class FoodDalImpl : IFoodDal
     {
-        private readonly OracleConnection _conn;
+        private readonly MySqlConnection _conn;
         private readonly IInfraDal _infraDal;
 
         public FoodDalImpl(IInfraDal infraDal, IConnectionString connectionString)
         {
             _infraDal = infraDal;
             var strConn = connectionString.ConnectionString;
-            _conn = new OracleConnection(strConn);
+            _conn = new MySqlConnection(strConn);
         }
         public DataSet GetAllCuisines(GetAllCuisinesRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getAllCuisines"
+            };
+            return _infraDal.ExecSpQuery(cmd);
         }
 
-        public DataSet GetFoodByCuisineRequest(GetFoodByCuisineRequest request)
+        public DataSet GetFoodByCuisine(GetFoodByCuisineRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByCuisine"
+            };
+            var param = _infraDal.GetParameter("p_cuisine", MySqlDbType.VarChar, request.Cuisine);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
         }
 
         public DataSet GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByFoodsRequirements"
+            };
+            var param1 = _infraDal.GetParameter("p_time", MySqlDbType.VarChar, request.Time);
+            var param2 = _infraDal.GetParameter("p_rating", MySqlDbType.Int32, request.Rating);
+            var param3 = _infraDal.GetParameter("p_course", MySqlDbType.VarChar, request.Course);
+            cmd.Parameters.Add(param1);
+            cmd.Parameters.Add(param2);
+            cmd.Parameters.Add(param3);
+            return _infraDal.ExecSpQuery(cmd);
         }
 
         public DataSet GetFoodByIngredient(GetFoodByIngredientRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByIngredient"
+            };
+            var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
         }
 
         public DataSet GetIngredient(GetIngredientRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getIngredient"
+            };
+            var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
         }
 
         public DataSet GetIngredientsByFoodId(GetIngredientsByFoodIdRequest request)
         {
-            throw new NotImplementedException();
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getIngredientsByFoodId"
+            };
+            var param = _infraDal.GetParameter("p_id", MySqlDbType.Int32, request.Id);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
         }
     }
 }

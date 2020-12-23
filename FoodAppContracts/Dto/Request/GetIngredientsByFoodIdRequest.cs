@@ -2,6 +2,6 @@
 {
     public class GetIngredientsByFoodIdRequest
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

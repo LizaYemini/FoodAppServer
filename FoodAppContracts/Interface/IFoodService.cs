@@ -8,7 +8,7 @@ namespace FoodAppContracts.Interface
     {
         public Response GetAllCuisines(GetAllCuisinesRequest request);
 
-        public Response GetFoodByCuisineRequest(GetFoodByCuisineRequest request);
+        public Response GetFoodByCuisine(GetFoodByCuisineRequest request);
         public Response GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request);
 
         public Response GetFoodByIngredient(GetFoodByIngredientRequest request);

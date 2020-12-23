@@ -4,5 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DI\DI.csproj" />
+    <ProjectReference Include="..\FoodAppContracts\FoodAppContracts.csproj" />
+    <ProjectReference Include="..\InfraDal\InfraDal.csproj" />
+  </ItemGroup>
+
 
 </Project>

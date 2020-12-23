@@ -1,34 +1,36 @@
 ﻿using InfraContracts.Interfaces;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace InfraDal
 {
     public class InfraDalImpl: IInfraDal
     {
-        public DataSet ExecSpQuery(OracleCommand cmd)
+        public DataSet ExecSpQuery(MySqlCommand cmd)
         {
             var retval = new DataSet();
-            var outParam = new OracleParameter();
+            var outParam = new MySqlParameter();
             cmd.CommandType = CommandType.StoredProcedure;
             outParam.ParameterName = "p_RETVAL";
-            outParam.OracleDbType = OracleDbType.RefCursor;
+            //outParam.MySqlDbType = MySqlDbType.RefCursor;
             outParam.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(outParam);
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(retval);
             return retval;
         }
 
-        public OracleParameter GetParameter(string paramName, OracleDbType paramType
+        public MySqlParameter GetParameter(string paramName, MySqlDbType paramType
             , object paramValue)
         {
-           return new OracleParameter
+           return new MySqlParameter
             {
                 ParameterName = paramName,
-                OracleDbType = paramType,
+                MySqlDbType = paramType,
                 Value = paramValue
             };
         }
+
     }
 }

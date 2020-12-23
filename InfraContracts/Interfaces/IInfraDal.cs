@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using MySql.Data.MySqlClient;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,9 +9,9 @@ namespace InfraContracts.Interfaces
 {
     public interface IInfraDal
     {
-        public OracleParameter GetParameter(string paramName, OracleDbType paramType
+        public MySqlParameter GetParameter(string paramName, MySqlDbType paramType
             , object paramValue);
 
-        public DataSet ExecSpQuery(OracleCommand cmd);
+        public DataSet ExecSpQuery(MySqlCommand cmd);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FoodAppContracts.Dto.Response
 {
-    public class GetFoodByFoodsRequirementsResponseOk: GetFoodByCuisineResponse
+    public class GetFoodByFoodsRequirementsResponseOk: GetFoodByFoodsRequirementsResponse
     {
         public string[] Food { get; set; }
     }

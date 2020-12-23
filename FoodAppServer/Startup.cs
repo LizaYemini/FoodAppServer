@@ -1,7 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using DI;
+using DIContracts;
+using FoodAppContracts;
+using FoodAppContracts.Interface;
+using InfraContracts.Interfaces;
+using InfraDal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +32,12 @@ namespace FoodAppServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connStr = Configuration.GetValue<string>("MySql:strConn");
+            services.AddTransient<IInfraDal, InfraDalImpl>();
+            services.AddScoped<IConnectionString>(c => new ProductionDbContextConnectionString(connStr));
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dlls");
+            var resolver = new Resolver(path, services);
+            services.AddSingleton<IResolver>(sp => resolver);
             services.AddControllers();
         }
 

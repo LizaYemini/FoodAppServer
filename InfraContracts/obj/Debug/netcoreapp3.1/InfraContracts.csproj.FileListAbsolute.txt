@@ -16,3 +16,12 @@ C:\Users\User\Desktop\Studies\Mizrahi\FinalProject\Git\Draw-App-Server\InfraCont
 C:\Users\User\Desktop\Studies\Mizrahi\FinalProject\Git\Draw-App-Server\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Studies\Mizrahi\FinalProject\Git\Draw-App-Server\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.dll
 C:\Users\User\Desktop\Studies\Mizrahi\FinalProject\Git\Draw-App-Server\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.pdb
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\bin\Debug\netcoreapp3.1\InfraContracts.deps.json
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\bin\Debug\netcoreapp3.1\InfraContracts.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\bin\Debug\netcoreapp3.1\InfraContracts.pdb
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.AssemblyInfo.cs
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.pdb
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraContracts\obj\Debug\netcoreapp3.1\InfraContracts.csproj.CoreCompileInputs.cache
