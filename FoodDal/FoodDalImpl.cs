@@ -83,6 +83,18 @@ namespace FoodDal
             return _infraDal.ExecSpQuery(cmd);
         }
 
+        public DataSet GetFoodByIngredients(GetFoodByIngredientsRequest request)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByIngredients"
+            };
+            var param = _infraDal.GetParameter("_list", MySqlDbType.VarChar, request.Ingredients);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request)
         {
             var cmd = new MySqlCommand

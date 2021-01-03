@@ -22,5 +22,7 @@ namespace FoodAppContracts.Interface
         public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request);
 
         public Response GetCuisineByIngredient(GetCuisineByIngredientRequest request);
+
+        public Response GetFoodByIngredients(GetFoodByIngredientsRequest request);
     }
 }
