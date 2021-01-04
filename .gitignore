@@ -28,6 +28,7 @@ bld/
 */[Oo]bj/
 */[Ll]og/
 */.vs/
+FoodAppServer/dlls/*
 FoodAppServer/[Bb]in/
 FoodAppServer/[Oo]bj/
 FoodAppServer/[Ll]og/
