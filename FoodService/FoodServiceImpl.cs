@@ -151,6 +151,33 @@ namespace FoodService
             }
         }
 
+        public Response GetFoodByIngredients(GetFoodByIngredientsRequest request)
+        {
+            List<string> foodList = new List<string>();
+
+            try
+            {
+                var dataSet = _dal.GetFoodByIngredients(request);
+                var table = dataSet.Tables[0];
+                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
+                {
+                    string temp = table.Rows[i]["food_id"].ToString();
+                    foodList.Add(temp);
+                }
+
+                GetFoodByIngredientResponse ret = new GetFoodByIngredientResponseOk
+                {
+                    Food = foodList.ToArray()
+                };
+
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                return new AppResponseError(ex.Message);
+            }
+        }
+
         public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request)
         {
             List<string> foodList = new List<string>();

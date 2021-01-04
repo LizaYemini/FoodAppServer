@@ -21,5 +21,7 @@ namespace FoodAppContracts.Interface
         public DataSet GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request);
 
         public DataSet GetCuisineByIngredient(GetCuisineByIngredientRequest request);
+
+        public DataSet GetFoodByIngredients(GetFoodByIngredientsRequest request);
     }
 }

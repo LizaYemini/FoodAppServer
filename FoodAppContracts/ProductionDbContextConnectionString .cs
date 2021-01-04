@@ -8,7 +8,7 @@ namespace FoodAppContracts
         public ProductionDbContextConnectionString()
         {
             ConnectionString =
-                "SERVER=localhost; DATABASE=project; UID=root; PASSWORD=dekel123;";
+                "SERVER=localhost; DATABASE=project; UID=root; PASSWORD=1234;";
         }
         public ProductionDbContextConnectionString(string connectionString)
         {
