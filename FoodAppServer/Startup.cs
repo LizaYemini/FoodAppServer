@@ -35,7 +35,8 @@ namespace FoodAppServer
             var connStr = Configuration.GetValue<string>("MySql:strConn");
             services.AddTransient<IInfraDal, InfraDalImpl>();
             services.AddScoped<IConnectionString>(c => new ProductionDbContextConnectionString(connStr));
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dlls");
+            //var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dlls");
+            var path = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName, "dlls/netcoreapp3.1");
             var resolver = new Resolver(path, services);
             services.AddSingleton<IResolver>(sp => resolver);
             services.AddControllers();

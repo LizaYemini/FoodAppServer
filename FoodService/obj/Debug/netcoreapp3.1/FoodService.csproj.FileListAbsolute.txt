@@ -1,14 +1,6 @@
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\FoodService.deps.json
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\FoodService.dll
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\FoodService.pdb
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\DI.dll
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\DIContracts.dll
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\FoodAppContracts.dll
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\InfraContracts.dll
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\FoodAppContracts.pdb
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\DI.pdb
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\DIContracts.pdb
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\bin\Debug\netcoreapp3.1\InfraContracts.pdb
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodService.deps.json
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodService.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodService.pdb
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\obj\Debug\netcoreapp3.1\FoodService.csprojAssemblyReference.cache
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\obj\Debug\netcoreapp3.1\FoodService.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodService\obj\Debug\netcoreapp3.1\FoodService.AssemblyInfo.cs

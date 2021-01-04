@@ -16,3 +16,9 @@ C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodDal\obj\Debug\netcor
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodDal\obj\Debug\netcoreapp3.1\FoodDal.dll
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodDal\obj\Debug\netcoreapp3.1\FoodDal.pdb
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodDal\obj\Debug\netcoreapp3.1\FoodDal.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\dlls\netcoreapp3.1\FoodDal.deps.json
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\dlls\netcoreapp3.1\FoodDal.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\dlls\netcoreapp3.1\FoodDal.pdb
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodDal.deps.json
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodDal.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\dlls\netcoreapp3.1\FoodDal.pdb

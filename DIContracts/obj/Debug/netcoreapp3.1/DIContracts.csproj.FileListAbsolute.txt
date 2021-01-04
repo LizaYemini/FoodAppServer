@@ -19,7 +19,6 @@ C:\Users\User\Desktop\Studies\Mizrahi\FinalProject\Git\Draw-App-Server\DIContrac
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\bin\Debug\netcoreapp3.1\DIContracts.deps.json
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\bin\Debug\netcoreapp3.1\DIContracts.dll
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\bin\Debug\netcoreapp3.1\DIContracts.pdb
-C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\obj\Debug\netcoreapp3.1\DIContracts.csprojAssemblyReference.cache
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\obj\Debug\netcoreapp3.1\DIContracts.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\obj\Debug\netcoreapp3.1\DIContracts.AssemblyInfo.cs
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\DIContracts\obj\Debug\netcoreapp3.1\DIContracts.csproj.CoreCompileInputs.cache

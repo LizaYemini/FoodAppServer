@@ -47,3 +47,5 @@ C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\dlls\netcoreapp3.1\FoodDal.deps.json
+C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\FoodAppServer\bin\Debug\netcoreapp3.1\dlls\netcoreapp3.1\FoodService.deps.json
