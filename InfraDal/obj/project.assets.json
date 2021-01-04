@@ -5681,19 +5681,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Studies\\C\\DataBases\\FoodAppServer\\InfraDal\\InfraDal.csproj",
+      "projectUniqueName": "C:\\Users\\user\\DatabaseProject\\Server\\FoodAppServer\\InfraDal\\InfraDal.csproj",
       "projectName": "InfraDal",
-      "projectPath": "C:\\Users\\User\\Desktop\\Studies\\C\\DataBases\\FoodAppServer\\InfraDal\\InfraDal.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Studies\\C\\DataBases\\FoodAppServer\\InfraDal\\obj\\",
+      "projectPath": "C:\\Users\\user\\DatabaseProject\\Server\\FoodAppServer\\InfraDal\\InfraDal.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\DatabaseProject\\Server\\FoodAppServer\\InfraDal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5701,15 +5701,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\User\\Desktop\\Studies\\Mizrahi\\FinalProject\\InfraPublish": {},
-        "C:\\Users\\User\\Desktop\\Studies\\Mizrahi\\RestAPI\\#5\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Studies\\C\\DataBases\\FoodAppServer\\InfraContracts\\InfraContracts.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Studies\\C\\DataBases\\FoodAppServer\\InfraContracts\\InfraContracts.csproj"
+            "C:\\Users\\user\\DatabaseProject\\Server\\FoodAppServer\\InfraContracts\\InfraContracts.csproj": {
+              "projectPath": "C:\\Users\\user\\DatabaseProject\\Server\\FoodAppServer\\InfraContracts\\InfraContracts.csproj"
             }
           }
         }
@@ -5737,7 +5735,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

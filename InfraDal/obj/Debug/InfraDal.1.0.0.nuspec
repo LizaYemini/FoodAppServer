@@ -4,6 +4,7 @@
     <id>InfraDal</id>
     <version>1.0.0</version>
     <authors>InfraDal</authors>
+    <owners>InfraDal</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
     <dependencies>
@@ -13,6 +14,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\User\Desktop\Studies\C\DataBases\FoodAppServer\InfraDal\bin\Debug\netcoreapp3.1\InfraDal.dll" target="lib\netcoreapp3.1\InfraDal.dll" />
+    <file src="C:\Users\user\DatabaseProject\Server\FoodAppServer\InfraDal\bin\Debug\netcoreapp3.1\InfraDal.dll" target="lib\netcoreapp3.1\InfraDal.dll" />
   </files>
 </package>
