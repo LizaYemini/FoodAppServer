@@ -23,9 +23,20 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
+.vs/
 FoodAppServer/[Bb]in/
 FoodAppServer/[Oo]bj/
 FoodAppServer/[Ll]og/
+FoodAppServer/.vs/
+FoodDal/[Bb]in/
+FoodDal/[Oo]bj/
+FoodDal/[Ll]og/
+FoodDal/.vs/
+FoodService/[Bb]in/
+FoodService/[Oo]bj/
+FoodService/[Ll]og/
+FoodService/.vs/
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
