@@ -24,6 +24,10 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 .vs/
+*/[Bb]in/
+*/[Oo]bj/
+*/[Ll]og/
+*/.vs/
 FoodAppServer/[Bb]in/
 FoodAppServer/[Oo]bj/
 FoodAppServer/[Ll]og/
