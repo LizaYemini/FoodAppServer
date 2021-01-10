@@ -375,9 +375,9 @@ namespace FoodService
                     ingredientList.Add(temp);
                 }
 
-                GetFoodByIngredientResponse ret = new GetFoodByIngredientResponseOk
+                GetIngredientResponse ret = new GetIngredientResponseOk
                 {
-                    Food = ingredientList.ToArray()
+                    Ingredient = ingredientList.ToArray()
                 };
 
                 return ret;
