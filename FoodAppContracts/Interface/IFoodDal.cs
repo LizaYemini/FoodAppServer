@@ -23,5 +23,13 @@ namespace FoodAppContracts.Interface
         public DataSet GetCuisineByIngredient(GetCuisineByIngredientRequest request);
 
         public DataSet GetFoodByIngredients(GetFoodByIngredientsRequest request);
+
+        public DataSet GetFoods(string cuisine, string ingredients, string withOutIngredients, string course,
+            double maxTime, int rating, int maxIngredients);
+
+        public DataSet GetFoodByFoodId(int id);
+        public DataSet GetCoursesByFoodId(int id);
+        public DataSet GetCuisinesByFoodId(int id);
+        public DataSet GetImageByFoodId(int id);
     }
 }

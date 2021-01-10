@@ -1,5 +1,8 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
+using FoodAppContracts.Dto;
 using FoodAppContracts.Dto.Request;
+using FoodAppContracts.Dto.Response;
 using InfraContracts.DTO;
 
 namespace FoodAppContracts.Interface
@@ -22,7 +25,12 @@ namespace FoodAppContracts.Interface
         public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request);
 
         public Response GetCuisineByIngredient(GetCuisineByIngredientRequest request);
-
         public Response GetFoodByIngredients(GetFoodByIngredientsRequest request);
+        public Response GetFoods(GetFoodsRequest request);
+        public FoodDto GetFoodByFoodId(int id);
+        public List<string> GetCoursesByFoodId(int id);
+        public List<string> GetCuisinesByFoodId(int id);
+        public string GetImageByFoodId(int id);
+        public List<string> GetIngredientsByFoodId(int id);
     }
 }

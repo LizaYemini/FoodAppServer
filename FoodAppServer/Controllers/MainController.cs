@@ -98,5 +98,12 @@ namespace FoodAppServer.Controllers
             var ret = _service.GetCuisineByIngredient(request);
             return ret;
         }
+        [Route("api/Main/GetFoods")]
+        [HttpPost]
+        public Response GetFoods([FromBody] GetFoodsRequest request)
+        {
+            var ret = _service.GetFoods(request);
+            return ret;
+        }
     }
 }

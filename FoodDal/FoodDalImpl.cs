@@ -31,6 +31,18 @@ namespace FoodDal
             return _infraDal.ExecSpQuery(cmd);
         }
 
+        public DataSet GetCoursesByFoodId(int id)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getCoursesByFoodId"
+            };
+            var param = _infraDal.GetParameter("p_id", MySqlDbType.Int32, id);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetCuisineByIngredient(GetCuisineByIngredientRequest request)
         {
             var cmd = new MySqlCommand
@@ -43,6 +55,18 @@ namespace FoodDal
             return _infraDal.ExecSpQuery(cmd);
         }
 
+        public DataSet GetCuisinesByFoodId(int id)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getCuisinesByFoodId"
+            };
+            var param = _infraDal.GetParameter("p_id", MySqlDbType.Int32, id);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetFoodByCuisine(GetFoodByCuisineRequest request)
         {
             var cmd = new MySqlCommand
@@ -51,6 +75,18 @@ namespace FoodDal
                 CommandText = "getFoodByCuisine"
             };
             var param = _infraDal.GetParameter("p_cuisine", MySqlDbType.VarChar, request.Cuisine);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
+        public DataSet GetFoodByFoodId(int id)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoodByFoodId"
+            };
+            var param = _infraDal.GetParameter("p_id", MySqlDbType.Int32, id);
             cmd.Parameters.Add(param);
             return _infraDal.ExecSpQuery(cmd);
         }
@@ -107,6 +143,31 @@ namespace FoodDal
             return _infraDal.ExecSpQuery(cmd);
         }
 
+        public DataSet GetFoods(string cuisine, string ingredients, string withOutIngredients, string course,
+            double maxTime, int rating, int maxIngredients)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getFoods"
+            };
+            var param1 = _infraDal.GetParameter("p_cuisine", MySqlDbType.VarChar, cuisine);
+            var param2 = _infraDal.GetParameter("p_ingredients", MySqlDbType.VarChar, ingredients);
+            var param3 = _infraDal.GetParameter("p_without_ingredients", MySqlDbType.VarChar, withOutIngredients);
+            var param4 = _infraDal.GetParameter("p_course", MySqlDbType.VarChar, course);
+            var param5 = _infraDal.GetParameter("p_time", MySqlDbType.Decimal, maxTime);
+            var param6 = _infraDal.GetParameter("p_rating", MySqlDbType.Int32, rating);
+            var param7 = _infraDal.GetParameter("p_max_ingredients", MySqlDbType.Int32, maxIngredients);
+            cmd.Parameters.Add(param1);
+            cmd.Parameters.Add(param2);
+            cmd.Parameters.Add(param3);
+            cmd.Parameters.Add(param4);
+            cmd.Parameters.Add(param5);
+            cmd.Parameters.Add(param6);
+            cmd.Parameters.Add(param7);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request)
         {
             var cmd = new MySqlCommand
@@ -115,6 +176,18 @@ namespace FoodDal
                 CommandText = "getFoodWithoutIngredient"
             };
             var param = _infraDal.GetParameter("p_ingredient", MySqlDbType.VarChar, request.Ingredient);
+            cmd.Parameters.Add(param);
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
+        public DataSet GetImageByFoodId(int id)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getImageByFoodId"
+            };
+            var param = _infraDal.GetParameter("p_id", MySqlDbType.Int32, id);
             cmd.Parameters.Add(param);
             return _infraDal.ExecSpQuery(cmd);
         }
