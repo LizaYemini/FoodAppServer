@@ -6,6 +6,7 @@ namespace FoodAppContracts.Interface
     public interface IFoodDal
     {
         public DataSet GetAllCuisines(GetAllCuisinesRequest request);
+        public DataSet GetAllCourses(GetAllCoursesRequest request);
 
         public DataSet GetFoodByCuisine(GetFoodByCuisineRequest request);
         public DataSet GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request);

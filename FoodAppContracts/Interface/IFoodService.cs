@@ -10,7 +10,7 @@ namespace FoodAppContracts.Interface
     public interface IFoodService
     {
         public Response GetAllCuisines(GetAllCuisinesRequest request);
-
+        public Response GetAllCourses(GetAllCoursesRequest request);
         public Response GetFoodByCuisine(GetFoodByCuisineRequest request);
         public Response GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request);
 

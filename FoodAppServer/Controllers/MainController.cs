@@ -26,6 +26,13 @@ namespace FoodAppServer.Controllers
             var ret = _service.GetAllCuisines(request);
             return ret;
         }
+        [Route("api/Main/GetAllCourses")]
+        [HttpPost]
+        public Response GetAllCourses([FromBody] GetAllCoursesRequest request)
+        {
+            var ret = _service.GetAllCourses(request);
+            return ret;
+        }
 
         [Route("api/Main/GetFoodByCuisine")]
         [HttpPost]

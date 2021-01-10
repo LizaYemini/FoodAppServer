@@ -21,6 +21,17 @@ namespace FoodDal
             var strConn = connectionString.ConnectionString;
             _conn = new MySqlConnection(strConn);
         }
+
+        public DataSet GetAllCourses(GetAllCoursesRequest request)
+        {
+            var cmd = new MySqlCommand
+            {
+                Connection = _conn,
+                CommandText = "getAllCourses"
+            };
+            return _infraDal.ExecSpQuery(cmd);
+        }
+
         public DataSet GetAllCuisines(GetAllCuisinesRequest request)
         {
             var cmd = new MySqlCommand

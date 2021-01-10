@@ -17,6 +17,34 @@ namespace FoodService
         {
             _dal = dal;
         }
+
+        public Response GetAllCourses(GetAllCoursesRequest request)
+        {
+            List<string> coursesList = new List<string>();
+
+            try
+            {
+                var dataSet = _dal.GetAllCourses(request);
+                var table = dataSet.Tables[0];
+                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
+                {
+                    string temp = table.Rows[i]["Course"].ToString();
+                    coursesList.Add(temp);
+                }
+
+                GetAllCuisinesResponse ret = new GetAllCuisinesResponseOk
+                {
+                    Cuisines = coursesList.ToArray()
+                };
+
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                return new AppResponseError(ex.Message);
+            }
+        }
+
         public Response GetAllCuisines(GetAllCuisinesRequest request)
         {
             List<string> cuisinesList = new List<string>();
