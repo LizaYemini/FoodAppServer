@@ -32,9 +32,9 @@ namespace FoodService
                     coursesList.Add(temp);
                 }
 
-                GetAllCuisinesResponse ret = new GetAllCuisinesResponseOk
+                GetAllCoursesResponse ret = new GetAllCoursesResponseOk
                 {
-                    Cuisines = coursesList.ToArray()
+                    Courses = coursesList.ToArray()
                 };
 
                 return ret;

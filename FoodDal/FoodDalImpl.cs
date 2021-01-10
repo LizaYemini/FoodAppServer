@@ -155,7 +155,7 @@ namespace FoodDal
         }
 
         public DataSet GetFoods(string cuisine, string ingredients, string withOutIngredients, string course,
-            double maxTime, int rating, int maxIngredients)
+            double? maxTime, int? rating, int? maxIngredients)
         {
             var cmd = new MySqlCommand
             {
