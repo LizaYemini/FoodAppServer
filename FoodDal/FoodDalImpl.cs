@@ -162,27 +162,14 @@ namespace FoodDal
                 Connection = _conn,
                 CommandText = "getFoods"
             };
+            
             var param1 = _infraDal.GetParameter("p_cuisine", MySqlDbType.VarChar, cuisine);
             var param2 = _infraDal.GetParameter("p_ingredients", MySqlDbType.VarChar, ingredients);
             var param3 = _infraDal.GetParameter("p_without_ingredients", MySqlDbType.VarChar, withOutIngredients);
-            var param4 = _infraDal.GetParameter("p_course", MySqlDbType.VarChar, course);
-            var param5 = _infraDal.GetParameter("p_time", MySqlDbType.Decimal, (object)DBNull.Value);
-            var param6 = _infraDal.GetParameter("p_rating", MySqlDbType.Decimal, (object)DBNull.Value);
-            var param7 = _infraDal.GetParameter("p_max_ingredients", MySqlDbType.Decimal, (object)DBNull.Value);
-            if (maxTime >= 0)
-            {
-                param5 = _infraDal.GetParameter("p_time", MySqlDbType.Decimal, maxTime);
-            }
-            if (rating >= 0)
-            {
-                param6 = _infraDal.GetParameter("p_rating", MySqlDbType.Int32, rating);
-            }
-            if (maxIngredients >= 0)
-            {
-                param7 = _infraDal.GetParameter("p_max_ingredients", MySqlDbType.Int32, maxIngredients);
-            }
-            
-            
+            var param4 = _infraDal.GetParameter("p_course", MySqlDbType.VarChar, course == "" ? null : course);
+            var param5 = _infraDal.GetParameter("p_max_ingredients", MySqlDbType.Int32, maxIngredients == -1 ? null : maxIngredients);
+            var param6 = _infraDal.GetParameter("p_time", MySqlDbType.Float, maxTime == -1 ? null : maxTime);
+            var param7 = _infraDal.GetParameter("p_rating", MySqlDbType.Int32, rating == -1 ? null : rating);
             cmd.Parameters.Add(param1);
             cmd.Parameters.Add(param2);
             cmd.Parameters.Add(param3);
