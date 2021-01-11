@@ -143,32 +143,6 @@ namespace FoodService
             }
         }
 
-        public Response GetFoodByCuisine(GetFoodByCuisineRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodByCuisine(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodByCuisineResponse ret = new GetFoodByCuisineResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
 
         public FoodDto GetFoodByFoodId(int id)
         {
@@ -192,114 +166,6 @@ namespace FoodService
             catch (Exception)
             {
                 return null;
-            }
-        }
-
-        public Response GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodByFoodsRequirements(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodByFoodsRequirementsResponse ret = new GetFoodByFoodsRequirementsResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
-
-        public Response GetFoodByIngredient(GetFoodByIngredientRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodByIngredient(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodByIngredientResponse ret = new GetFoodByIngredientResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
-
-        public Response GetFoodByIngredients(GetFoodByIngredientsRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodByIngredients(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodByIngredientResponse ret = new GetFoodByIngredientResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
-
-        public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodByMaxIngredient(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodByMaxIngredientResponse ret = new GetFoodByMaxIngredientResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
             }
         }
 
@@ -348,33 +214,6 @@ namespace FoodService
             }
         }
 
-        public Response GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request)
-        {
-            List<string> foodList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetFoodWithoutIngredient(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["food_id"].ToString();
-                    foodList.Add(temp);
-                }
-
-                GetFoodWithoutIngredientResponse ret = new GetFoodWithoutIngredientResponseOk
-                {
-                    Food = foodList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
-
         public string GetImageByFoodId(int id)
         {
             try
@@ -416,32 +255,7 @@ namespace FoodService
             }
         }
 
-        public Response GetIngredientsByFoodId(GetIngredientsByFoodIdRequest request)
-        {
-            List<string> ingredientList = new List<string>();
-
-            try
-            {
-                var dataSet = _dal.GetIngredientsByFoodId(request);
-                var table = dataSet.Tables[0];
-                for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-                {
-                    string temp = table.Rows[i]["ingredient"].ToString();
-                    ingredientList.Add(temp);
-                }
-
-                GetIngredientsByFoodIdResponse ret = new GetIngredientsByFoodIdResponseOk
-                {
-                    Ingredients = ingredientList.ToArray()
-                };
-
-                return ret;
-            }
-            catch (Exception ex)
-            {
-                return new AppResponseError(ex.Message);
-            }
-        }
+ 
 
         public List<string> GetIngredientsByFoodId(int id)
         {
@@ -449,11 +263,7 @@ namespace FoodService
 
             try
             {
-                GetIngredientsByFoodIdRequest request = new GetIngredientsByFoodIdRequest
-                {
-                    Id = id
-                };
-                var dataSet = _dal.GetIngredientsByFoodId(request);
+                var dataSet = _dal.GetIngredientsByFoodId(id);
                 var table = dataSet.Tables[0];
                 for (int i = 0; i < dataSet.Tables[0].Rows.Count; i++)
                 {

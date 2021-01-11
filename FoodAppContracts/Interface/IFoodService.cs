@@ -11,21 +11,8 @@ namespace FoodAppContracts.Interface
     {
         public Response GetAllCuisines(GetAllCuisinesRequest request);
         public Response GetAllCourses(GetAllCoursesRequest request);
-        public Response GetFoodByCuisine(GetFoodByCuisineRequest request);
-        public Response GetFoodByFoodsRequirements(GetFoodByFoodsRequirementsRequest request);
-
-        public Response GetFoodByIngredient(GetFoodByIngredientRequest request);
-
         public Response GetIngredient(GetIngredientRequest request);
-
-        public Response GetIngredientsByFoodId(GetIngredientsByFoodIdRequest request);
-
-        public Response GetFoodWithoutIngredient(GetFoodWithoutIngredientRequest request);
-
-        public Response GetFoodByMaxIngredient(GetFoodByMaxIngredientRequest request);
-
         public Response GetCuisineByIngredient(GetCuisineByIngredientRequest request);
-        public Response GetFoodByIngredients(GetFoodByIngredientsRequest request);
         public Response GetFoods(GetFoodsRequest request);
         public FoodDto GetFoodByFoodId(int id);
         public List<string> GetCoursesByFoodId(int id);

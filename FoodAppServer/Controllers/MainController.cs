@@ -34,67 +34,12 @@ namespace FoodAppServer.Controllers
             return ret;
         }
 
-        [Route("api/Main/GetFoodByCuisine")]
-        [HttpPost]
-        public Response GetFoodByCuisine([FromBody] GetFoodByCuisineRequest request)
-        {
-            var ret = _service.GetFoodByCuisine(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetFoodByFoodsRequirements")]
-        [HttpPost]
-        public Response GetFoodByFoodsRequirements([FromBody] GetFoodByFoodsRequirementsRequest request)
-        {
-            var ret = _service.GetFoodByFoodsRequirements(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetFoodByIngredient")]
-        [HttpPost]
-        public Response GetFoodByIngredient([FromBody] GetFoodByIngredientRequest request)
-        {
-            var ret = _service.GetFoodByIngredient(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetFoodByIngredients")]
-        [HttpPost]
-        public Response GetFoodByIngredients([FromBody] GetFoodByIngredientsRequest request)
-        {
-            var ret = _service.GetFoodByIngredients(request);
-            return ret;
-        }
 
         [Route("api/Main/GetIngredient")]
         [HttpPost]
         public Response GetIngredient([FromBody] GetIngredientRequest request)
         {
             var ret = _service.GetIngredient(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetIngredientsByFoodId")]
-        [HttpPost]
-        public Response GetIngredientsByFoodId([FromBody] GetIngredientsByFoodIdRequest request)
-        {
-            var ret = _service.GetIngredientsByFoodId(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetFoodWithoutIngredient")]
-        [HttpPost]
-        public Response GetFoodWithoutIngredient([FromBody] GetFoodWithoutIngredientRequest request)
-        {
-            var ret = _service.GetFoodWithoutIngredient(request);
-            return ret;
-        }
-
-        [Route("api/Main/GetFoodByMaxIngredient")]
-        [HttpPost]
-        public Response GetFoodByMaxIngredient([FromBody] GetFoodByMaxIngredientRequest request)
-        {
-            var ret = _service.GetFoodByMaxIngredient(request);
             return ret;
         }
 
