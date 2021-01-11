@@ -10,8 +10,8 @@ namespace FoodAppContracts.Dto.Request
         public string[] Ingredients { get; set; }
         public string[] WithoutIngredients { get; set; }    
         public string Course { get; set; }
-        public float MaxTime { get; set; }
-        public int Rating { get; set; }
-        public int MaxIngredients { get; set; }
+        public float? MaxTime { get; set; }
+        public int? Rating { get; set; }
+        public int? MaxIngredients { get; set; }
     }
 }
